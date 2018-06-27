@@ -7,6 +7,7 @@
 .m-container-1600 { max-width:1600px;width:100%;margin:0 auto; }
 .m-container-1400 { max-width:1400px;width:100%;margin:0 auto; }
 .m-container-1200 { max-width:1200px;width:100%;margin:0 auto; }
+.m-container-768  { max-width:768px; width:100%;margin:0 auto; }
 
 .m-section { padding-top:15px;padding-bottom:15px; }
 .m-inner-section { padding-left:15px;padding-right:15px; }
