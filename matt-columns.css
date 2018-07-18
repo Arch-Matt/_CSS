@@ -11,9 +11,10 @@
 
 .m-section { padding-top:15px;padding-bottom:15px; }
 .m-inner-section { padding-left:15px;padding-right:15px; }
-.m-section-30 { padding-top:30px;padding-bottom:30px; }
-.m-inner-section-30 { padding-top:30px;padding-bottom:30px; }
 
+.m-section-30 { padding-top:30px;padding-bottom:30px; }
+.m-inner-section-30 { padding-left:30px;padding-right:30px; }
+ 
 .text-center { text-align:center; }
 
 
