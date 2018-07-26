@@ -1,0 +1,189 @@
+M-Grid.
+CSS grid ready framework, for when other browsers finally catch up.
+(It even supports IE (but with flex, not ms-grid (becuase ms-grid is worse than tables)))
+
+
+I like CSS grid, but unfortunately some browsers don't. I built this as a way for me to really quickly put together layouts with grid without having to then go through and do a fallback layout for each of them as well. It's designed around desktop first and if the browser doesn't support grid then it falls back to flex. And if the browser doesn't support flex then is it really a browser at that point?
+
+
+Firstly, gotta include it:
+<link rel="stylesheet" href="https://rawgit.com/Arch-Matt/_CSS/master/matt-columns.css">
+
+OR you can grab it from github:
+https://github.com/Arch-Matt/_CSS
+
+
+
+Grid scales for 4 sizes:
+xl (Large screens) - > 990px
+lg (Average desktop) - > 768px
+md (Tablet) - > 560px
+sm (Mobile) - < 560px
+
+
+
+Set up a grid:
+
+<div class="m-grid">
+
+</div>
+
+
+
+
+Based on a twelve column grid, so you establish how many columns a div takes up at each size:
+
+m-xl-1
+m-xl-2
+m-xl-3
+m-xl-4
+m-xl-5
+m-xl-6
+m-xl-7
+m-xl-8
+m-xl-9
+m-xl-10
+m-xl-11
+m-xl-12
+
+<div class="m-xl-12 m-lg-12 m-md-12 m-sm-12">
+
+</div>
+
+
+
+
+There is also a bonus size 0 so you can tell a column to hide at different sizes
+
+m-xl-0
+
+
+
+
+So put it all together and you get a two column grid that becomes a one column grid on tablet and mobile:
+
+<div class="m-grid">
+
+	<div class="m-xl-6 m-lg-6 m-md-12 m-sm-12">
+		Column 1
+	</div>
+
+	<div class="m-xl-6 m-lg-6 m-md-12 m-sm-12">
+		Column 2
+	</div>
+
+</div>
+
+
+
+
+
+You can also put grids INSIDE of grids *Inception BWWWAAAOOOOOOM*
+
+<!-- GRID ONE -->
+<div class="m-grid">
+
+	<div class="m-xl-6 m-lg-6 m-md-12 m-sm-12">
+
+		<!-- GRID TWO -->
+		<div class="m-grid">
+
+			<div class="m-xl-4 m-lg-4 m-md-6 m-sm-6">
+				Column 1
+			</div>
+
+			<div class="m-xl-4 m-lg-4 m-md-6 m-sm-6">
+				Column 2
+			</div>
+
+				<div class="m-xl-4 m-lg-4 m-md-6 m-sm-6">
+				Column 3
+			</div>
+
+		</div>
+	</div>
+
+	<div class="m-xl-6 m-lg-6 m-md-12 m-sm-12">
+		Column 2
+	</div>
+
+</div>
+
+
+
+
+There are some presets for grid spacing too:
+
+m-grid-gap-5    (5px gap)
+m-grid-gap-10	(10px gap)
+m-grid-gap-15	(You get the idea)
+m-grid-gap-20
+m-grid-gap-25
+m-grid-gap-30
+
+Combine these with m-grid and you'll add some spacing in px:
+
+<div class="m-grid m-grid-gap-15">
+
+</div>
+
+(Because grid is superior to other layouts, there will be some slight spacing on left/right of the grid if it has to use flex)
+
+
+
+
+Containers!
+Our designers have a fondness for contained sites, so, I've set up some common containers for when you need something contained (they all centre themselves). Simple.
+
+
+m-container-1920 (1920px max width)
+m-container-1600 (I'm not doing it again)
+m-container-1400
+m-container-1200
+m-container-768
+
+
+
+Finally there are some bits that are mostly for my own convinience, but I'll let you in on those too:
+
+Like their fondness for containers, our designers are also fans of specific spacing within their containers, namely 15 or 30px. They don't always want them on the same sides though. <strike>To combat their whims</strike> To meet their needs, I've set up a couple of classes for top/bottom and left/right padding.
+
+This one does top/bottom:
+m-section-15
+m-section-30
+
+And this one does left/right:
+m-inner-section-15
+m-inner-section-30
+
+
+
+And lastly, quick text alignment classes:
+
+text-left
+text-right
+text-center
+
+I'll let you guess which is which.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
